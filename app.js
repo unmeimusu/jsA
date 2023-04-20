@@ -19,3 +19,9 @@ function powR(x,n) {
     }
 }
 document.write("<br>powR: "+powR(2,3))
+
+function printSc(sc) {
+    console.log(sc)
+}
+printSc("Hello")
+

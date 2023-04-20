@@ -7,3 +7,10 @@ const data = reactive({
   
 document.write(data.price)
 console.log(data.price)
+
+html`
+  <ul>
+    <li>Hello ${data.location} (🪨 static expression)</li>
+    <li>Hello ${() => data.location} (⚡ dynamic expression)</li>
+  </ul>
+`

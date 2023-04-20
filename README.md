@@ -1,2 +1,2 @@
 # jsA
-Javascript in Advance with Library support.
+Javascript in advance with library support.

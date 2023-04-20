@@ -9,12 +9,13 @@ function pow(x,n) {
     
     return result
 }
-document.write(pow(2,3))
+document.write(pow("pow: ",2,3))
 // #2 Recursive Thinking slower
-function pow(x,n) {
+function powR(x,n) {
     if ( n == 1 ) {
         return x;
     } else {
-        return x * pow( x, n-1 )  // 2 * 4
+        return x * powR( x, n-1 )  // 2 * 4
     }
 }
+document.write(powR("powR: ",2,3))

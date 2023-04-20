@@ -2,7 +2,7 @@ import { reactive, html } from './a/core@1.0.0-alpha.9';
 
 const data = reactive({
     price: 25,
-    quantity: 10
+    quantity: [10,12,15]
   })
 
 html`

@@ -1,4 +1,4 @@
-import { reactive, html } from "./a/core@1.0.0-alpha.9.js"
+import { reactive, html } from 'https://esm.sh/@arrow-js/core';
 
 const data = reactive({
     price: 25,

@@ -9,7 +9,7 @@ html`
   <h1>Arrow JS</h1>
 `
 
-// Reactive Data
+// Reactive data with $on/$off
 // Will be changed for each updated value
 // $on : observe mutations to their properties
 

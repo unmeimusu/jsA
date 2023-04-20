@@ -5,6 +5,10 @@ const data = reactive({
   quantity: 10
 })
 
+html`
+  
+`
+
 // Reactive Data
 // Will be changed for each updated value
 // $on : observe mutations to their properties

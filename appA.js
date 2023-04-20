@@ -5,4 +5,10 @@ const data = reactive({
   quantity: 10
 })
 
+data.$on('price',(value)=>{
+  console.log(`Price changed to ${value}`)
+})
+
+data.price = 35
+
 console.log(data.price);

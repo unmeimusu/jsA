@@ -5,9 +5,9 @@ const data = reactive({
   quantity: 10
 })
 
-// 
+// Will be changed for each updated value
 data.$on('price',(value)=>{
-  console.log(`Price changed to ${value}`)
+  console.log(`Price changed to: ${data.price}`)
 })
 
 data.price = 35

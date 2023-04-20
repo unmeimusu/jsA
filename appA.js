@@ -35,7 +35,7 @@ data1.$on('price',total)
 data1.$on('quantity', total)
 data1.$on('logTotal', total)
 total()
-data1.price = 35
-
+data1.price = 35 // changed value will run the function
+// Turn off observation
 data1.$off('quantity', total)
-data1.quantity = 20
+data1.quantity = 20 // changed value will not run the function

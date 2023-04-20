@@ -6,7 +6,7 @@ const data = reactive({
 })
 
 html`
-  
+  <h1>Arrow JS</h1>
 `
 
 // Reactive Data

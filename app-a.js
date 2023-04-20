@@ -1,16 +1,13 @@
-import { reactive, html } from "./a/core.mjs"
+import { reactive, html } from "./a/core@1.0.0-alpha.9"
 
 const data = reactive({
     price: 25,
     quantity: 10
   })
-  
-document.write(data.price)
-console.log(data.price)
 
 html`
   <ul>
-    <li>Hello ${data.location} (🪨 static expression)</li>
-    <li>Hello ${() => data.location} (⚡ dynamic expression)</li>
+    <li>Hello ${data.price} (🪨 static expression)</li>
+    <li>Hello ${() => data.quantity} (⚡ dynamic expression)</li>
   </ul>
 `

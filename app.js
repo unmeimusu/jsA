@@ -1,5 +1,5 @@
 // Two Ways of Thinking
-// #1 Iterative Thinking which is faster
+// #1 Iterative Thinking, faster and more efficient
 function pow(x,n) {
     let result = 1
 
@@ -9,8 +9,8 @@ function pow(x,n) {
     
     return result
 }
-document.write(pow("pow: ",2,3))
-// #2 Recursive Thinking slower
+document.write("Pow: ",pow(2,3))
+// #2 Recursive Thinking
 function powR(x,n) {
     if ( n == 1 ) {
         return x;
@@ -18,4 +18,4 @@ function powR(x,n) {
         return x * powR( x, n-1 )  // 2 * 4
     }
 }
-document.write(powR("powR: ",2,3))
+document.write("<br>powR: "+powR(2,3))

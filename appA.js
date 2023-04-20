@@ -5,11 +5,14 @@ const data = reactive({
   quantity: 10
 })
 
+// Reactive Data
 // Will be changed for each updated value
+// observe mutations to their properties
 data.$on('price',(value)=>{
-  console.log(`Price changed to: ${data.price}`)
+  console.log(`Price changed to ${data.price}`)
 })
 
 data.price = 35
 
 console.log(data.price);
+// 

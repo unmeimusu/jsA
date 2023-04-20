@@ -5,4 +5,5 @@ const data = reactive({
     quantity: 10
   })
   
-document.write(data.price);
+document.write(data.price)
+console.log(data.price)

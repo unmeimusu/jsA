@@ -24,4 +24,3 @@ function printSc(sc) {
     console.log(sc)
 }
 printSc("Hello")
-

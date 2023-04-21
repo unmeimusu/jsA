@@ -71,12 +71,10 @@ watch(
 const data23 = reactive({
   clicks: 0
 });
-const counter = html`
+const t = html`
   <button @click="${()=>data23.clicks++}">
     Fired ${()=>data23.clicks} arrows
   </button>
 `
-function d(id) {
-  return document.getElementById(id)
-}
-counter(d("app"))
+const d = (id) => document.getElementById(id)
+t(d("app"))

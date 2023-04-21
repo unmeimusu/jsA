@@ -50,7 +50,7 @@ const data23 = reactive({
 
 const counter = html`
   <button @click="${()=>data23.clicks++}">
-    Fired ${data23.clicks} arrows
+    Fired ${()=>data23.clicks} arrows
   </button>
 `
 

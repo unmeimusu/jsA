@@ -85,9 +85,19 @@ const d = (id) => document.getElementById(id)
 // print html to id="app"
 t(d("app"))
 
-let p = html`
+const data66 = reactive({
+  location: ["World","Mars","Pluto"]
+})
+
+let list = html`
+  <label>Data location : </label>
+  <select>
+    <option value="${e=>{data.location = e.target.location}}">World</option>
+  </select>
   <ul>
-    <li>Hello ${data.location} (🪨 static expression)</li>
-    <li>Hello ${() => data.location} (⚡ dynamic expression)</li>
+    <li>Hello ${data66.location} (🪨 static expression)</li>
+    <li>Hello ${() => data66.location} (⚡ dynamic expression)</li>
   </ul>
 `
+
+list(d("app2"))

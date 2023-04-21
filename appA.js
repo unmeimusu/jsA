@@ -89,10 +89,14 @@ const data66 = reactive({
   location: ["World","Mars","Pluto"]
 })
 
-let list = html`
+const list2 = html`
   <label>Data location : </label>
   <select>
-    <option value="${e=>{data.location = e.target.location}}">${data.location}</option>
+    ${()=>data.location.map(
+      loc => html`
+      <option value="${loc}">${data.location}</option>
+      `
+    )}
   </select>
   <ul>
     <li>Hello ${data66.location} (🪨 static expression)</li>
@@ -100,4 +104,12 @@ let list = html`
   </ul>
 `
 
-list(d("app2"))
+list2(d("app"))
+
+const t2 = html`
+  <button @click="${()=>data23.clicks++}">
+    Fired ${()=>data23.clicks} arrows
+  </button>
+`
+
+t2(d("app"))

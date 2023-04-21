@@ -55,4 +55,3 @@ const counter = html`
 `
 
 counter(document.getElementById("app"))
-

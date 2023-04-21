@@ -30,6 +30,7 @@ function total () {
     console.log(`Total (in reactive): ${data1.price * data1.quantity}`)
   }
 }
+
 // observe properties and then execute function
 data1.$on('price',total)
 data1.$on('quantity', total)
@@ -71,7 +72,7 @@ const counter = html`
     Fired ${()=>data23.clicks} arrows
   </button>
 `
-function D(id) {
+function d(id) {
   return document.getElementById(id)
 }
-counter(D("app"))
+counter(d("app"))

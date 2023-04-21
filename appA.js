@@ -84,3 +84,10 @@ function display(id) {
 const d = (id) => document.getElementById(id)
 // print html to id="app"
 t(d("app"))
+
+let p = html`
+  <ul>
+    <li>Hello ${data.location} (🪨 static expression)</li>
+    <li>Hello ${() => data.location} (⚡ dynamic expression)</li>
+  </ul>
+`

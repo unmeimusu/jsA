@@ -38,7 +38,21 @@ total()
 data1.price = 35 // changed value will run the function
 
 // Example 3: Turn off observation
-data1.$off('quantity', total)
-data1.quantity = 20 // changed value will not run the function
+data1.$off('quantity', total);
+data1.quantity = 20; // changed value will not run the function
 
 html`<h1>Please check your console</h1>`
+
+// HTML with components to the dom
+const data23 = reactive({
+  clicks: 0
+});
+
+const counter = html`
+  <button @click="${()=>data23.clicks++}">
+    Fired ${()=>data23.clicks} arrows
+  </button>
+`
+
+counter(document.getElementById("app"))
+

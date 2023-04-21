@@ -67,7 +67,7 @@ watch(
   (total) => total !== false && console.log(`Total (Concise Code): ${total}`)
 )
 
-// HTML with components to the DOM
+// HTML with reactive expressions to the DOM
 const data23 = reactive({
   clicks: 0
 });
@@ -76,5 +76,11 @@ const t = html`
     Fired ${()=>data23.clicks} arrows
   </button>
 `
+// display
+function display(id) {
+  return document.getElementById(id)
+}
+// shorter
 const d = (id) => document.getElementById(id)
+// print html to id="app"
 t(d("app"))

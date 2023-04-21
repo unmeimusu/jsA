@@ -66,12 +66,10 @@ data25.price = 50
 const data23 = reactive({
   clicks: 0
 });
-
 const counter = html`
   <button @click="${()=>data23.clicks++}">
     Fired ${()=>data23.clicks} arrows
   </button>
 `
-
 counter(document.getElementById("app"))
 document.getElementById("app").innerHTML = "Hello"

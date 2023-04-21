@@ -62,7 +62,7 @@ watch(total2)
 
 data25.price = 50
 
-// HTML with components to the dom
+// HTML with components to the DOM
 const data23 = reactive({
   clicks: 0
 });
@@ -74,3 +74,4 @@ const counter = html`
 `
 
 counter(document.getElementById("app"))
+document.getElementById("app").innerHTML = "Hello"

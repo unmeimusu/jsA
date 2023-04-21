@@ -5,9 +5,7 @@ const data = reactive({
   quantity: 10
 })
 
-html`
-  <h1>Arrow JS</h1>
-`
+
 
 // Reactive data with $on/$off
 // Will be changed for each updated value
@@ -44,3 +42,5 @@ data1.price = 35 // changed value will run the function
 // Example 3: Turn off observation
 data1.$off('quantity', total)
 data1.quantity = 20 // changed value will not run the function
+
+html`<h1>Please check your console</h1>`

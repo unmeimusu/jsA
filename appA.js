@@ -61,6 +61,11 @@ function total2 () {
 watch(total2)
 
 data25.price = 5
+// Example: Coding style with && and then return as parameter value
+watch(
+  () => data25.logTotal && data25.quantit, // value passed to parameter
+  (total) => total !== false && console.log(`Total (Concise Code): ${total}`)
+)
 
 // HTML with components to the DOM
 const data23 = reactive({

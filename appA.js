@@ -1,4 +1,4 @@
-import { reactive, html } from './a/core@1.0.0-alpha.9.js';
+import { reactive, watch, html } from './a/core@1.0.0-alpha.9.js';
 
 const data = reactive({
   price: 25,
@@ -27,7 +27,7 @@ const data1 = reactive({
 
 function total () {
   if (data1.logTotal) {
-    console.log(`Total: ${data1.price * data1.quantity}`)
+    console.log(`Total (in reactive): ${data1.price * data1.quantity}`)
   }
 }
 // observe properties and then execute function
@@ -42,6 +42,25 @@ data1.$off('quantity', total);
 data1.quantity = 20; // changed value will not run the function
 
 html`<h1>Please check your console</h1>`
+
+// Watch
+const data25 = reactive({
+  price: 25,
+  quantity: 10,
+  logTotal: true
+})
+
+function total2 () {
+  if (data25.logTotal) {
+    console.log(`Total (in watch): ${data25.price * data25.quantity}`)
+  } else {
+    console.log("watch false")
+  }
+}
+
+watch(total2)
+
+data25.price = 50
 
 // HTML with components to the dom
 const data23 = reactive({

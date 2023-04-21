@@ -92,7 +92,7 @@ const data66 = reactive({
 let list = html`
   <label>Data location : </label>
   <select>
-    <option value="${e=>{data.location = e.target.location}}">World</option>
+    <option value="${e=>{data.location = e.target.location}}">${data.location}</option>
   </select>
   <ul>
     <li>Hello ${data66.location} (🪨 static expression)</li>

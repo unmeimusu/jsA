@@ -50,7 +50,7 @@ const data25 = reactive({
   quantity: 10,
   logTotal: true
 })
-// Observe on price 
+// Observe on price property
 data25.$on("price",total2)
 // Same result
 function total2 () {

@@ -44,13 +44,15 @@ data1.quantity = 20; // changed value will not run the function
 
 html`<h1>Please check your console</h1>`
 
-// Watch
+// Watch on function
 const data25 = reactive({
   price: 25,
   quantity: 10,
   logTotal: true
 })
-
+// Observe on price 
+data25.$on("price",total2)
+// Same result
 function total2 () {
   if (data25.logTotal) {
     console.log(`Total (in watch): ${data25.price * data25.quantity}`)
@@ -58,10 +60,9 @@ function total2 () {
     console.log("watch false")
   }
 }
-
 watch(total2)
 
-data25.price = 50
+data25.price = 5
 
 // HTML with components to the DOM
 const data23 = reactive({

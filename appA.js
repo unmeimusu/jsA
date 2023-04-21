@@ -5,8 +5,6 @@ const data = reactive({
   quantity: 10
 })
 
-
-
 // Reactive data with $on/$off
 // Will be changed for each updated value
 // $on : observe mutations to their properties

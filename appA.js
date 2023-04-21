@@ -71,5 +71,7 @@ const counter = html`
     Fired ${()=>data23.clicks} arrows
   </button>
 `
-counter(document.getElementById("app"))
-document.getElementById("app").innerHTML = "Hello"
+function D(id) {
+  return document.getElementById(id)
+}
+counter(D("app"))

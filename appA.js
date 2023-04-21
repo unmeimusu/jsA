@@ -42,8 +42,6 @@ data1.price = 35 // changed value will run the function
 data1.$off('quantity', total);
 data1.quantity = 20; // changed value will not run the function
 
-html`<h1>Please check your console</h1>`
-
 // Watch on function
 const data25 = reactive({
   price: 25,

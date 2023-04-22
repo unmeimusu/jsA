@@ -76,11 +76,15 @@ const t = html`
     Fired1 ${()=>data23.clicks} arrows1
   </button>
 `
-// display
+// display with bundler
+html`<div>Inside one parent element</div>`
+
+// display without bundler
 function display(id) {
   return document.getElementById(id)
 }
-// shorter
+
+// display without bundler: shorter
 const d = (id) => document.getElementById(id)
 // print html to id="app"
 t(d("app"))
@@ -90,26 +94,25 @@ const t2 = html`
     Fired2 ${()=>data23.clicks} arrows2
   </button>
 `
-
 t2(d("app"))
 
+
+// Mapping list data
 const data66 = reactive({
   location: ["World","Mars","Pluto"]
 })
 
 const list2 = html`
-  <div>
     <label>Data location : </label>
     <select>
       ${()=> data66.location.map(
-        al => html`<option>${()=>al}</option>`
+        al => html`<option value="">${()=>al}</option>`
       )}
     </select>
     <ul>
       <li>Hello ${data66.location} (🪨 static expression)</li>
       <li>Hello ${() => data66.location} (⚡ dynamic expression)</li>
     </ul>
-  </div>
 `
 
 list2(d("app"))

@@ -73,7 +73,7 @@ const data23 = reactive({
 });
 const t = html`
   <button @click="${()=>data23.clicks++}">
-    Fired ${()=>data23.clicks} arrows
+    Fired1 ${()=>data23.clicks} arrows1
   </button>
 `
 // display
@@ -85,31 +85,32 @@ const d = (id) => document.getElementById(id)
 // print html to id="app"
 t(d("app"))
 
+const t2 = html`
+  <button @click="${()=>data23.clicks++}">
+    Fired2 ${()=>data23.clicks} arrows2
+  </button>
+`
+
+t2(d("app"))
+
 const data66 = reactive({
   location: ["World","Mars","Pluto"]
 })
 
 const list2 = html`
-  <label>Data location : </label>
-  <select>
-    ${()=>data.location.map(
-      loc => html`
-      <option value="${loc}">${data.location}</option>
-      `
-    )}
-  </select>
-  <ul>
-    <li>Hello ${data66.location} (🪨 static expression)</li>
-    <li>Hello ${() => data66.location} (⚡ dynamic expression)</li>
-  </ul>
+  <div>
+    <label>Data location : </label>
+    <select>
+      ${()=> data66.location.map(
+        al => html`<option>${()=>al}</option>`
+      )}
+    </select>
+    <ul>
+      <li>Hello ${data66.location} (🪨 static expression)</li>
+      <li>Hello ${() => data66.location} (⚡ dynamic expression)</li>
+    </ul>
+  </div>
 `
 
 list2(d("app"))
 
-const t2 = html`
-  <button @click="${()=>data23.clicks++}">
-    Fired ${()=>data23.clicks} arrows
-  </button>
-`
-
-t2(d("app"))

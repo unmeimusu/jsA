@@ -96,7 +96,6 @@ const t2 = html`
 `
 t2(d("app"))
 
-
 // Mapping list data
 const data66 = reactive({
   location: ["World","Mars","Pluto"]

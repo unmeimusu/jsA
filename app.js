@@ -9,6 +9,7 @@ function pow(x,n) {
     
     return result
 }
+
 document.write("Pow: ",pow(2,3))
 // #2 Recursive Thinking
 function powR(x,n) {

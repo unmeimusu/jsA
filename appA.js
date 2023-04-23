@@ -106,21 +106,17 @@ const list2 = html`
     <label>Data location : </label>
     <select id="selct">
       ${()=> data66.location.map(
-        al => html`<option value="${()=>al}" selected>${()=>al}</option>`
+        al => html`<option id="opt" value="${()=>al}">${()=>al}</option>`
       )}
     </select>
-    <button onclick="${selectedOpt()}">Check</button>
     <ul>
       <li>Hello list location: ${data66.location} (🪨 static expression)</li>
-      <li>Hello, my current location: ${y[x].text} (⚡ dynamic expression)</li>
+      <li>Hello, my current location:<span id="op">${() => {y[x].text}}</span> (⚡ dynamic expression)</li>
     </ul>
 `
 
-function selectedOpt() {
-  var x = document.getElementById("selct").selectedIndex
-  var y = document.getElementsByTagName("option")
-  alert("Check input: ",y[x].text)
-}
+var x = document.getElementById("selct").selectedIndex
+var y = document.getElementsByTagName("option")
 
 list2(d("app"))
 

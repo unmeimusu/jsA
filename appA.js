@@ -119,8 +119,7 @@ const list2 = html`
 function selectedOpt() {
   var x = document.getElementById("selct").selectedIndex
   var y = document.getElementsByTagName("option")
-
-  
+  alert("Check input: ",y[x].text)
 }
 
 list2(d("app"))

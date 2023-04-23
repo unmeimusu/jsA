@@ -25,3 +25,5 @@ function printSc(sc) {
     console.log(sc)
 }
 printSc("Hello")
+
+// #3 Selected Value in Dropdown List

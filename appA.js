@@ -98,17 +98,14 @@ t2(d("app"))
 
 // Mapping list data
 const data66 = reactive({
-  location: ["World","Mars","Pluto"]
+  location: ["World","Mars","Pluto"],
+  current: ""
 })
 
-const x = document.getElementById("selct")
-const y = document.getElementsByName("option")[x].value
-
-watch(
-  () => document.getElementById("op").innerHTML = x , // value passed to parameter
-)
-
 const list2 = html`
+    <script>
+        current = document.getElementById("selct").options[document.getElementsByTagName("option").selectedIndex].value
+    </script>
     <label>Data location : </label>
     <select id="selct">
       ${()=> data66.location.map(
@@ -117,7 +114,7 @@ const list2 = html`
     </select>
     <ul>
       <li>Hello list location: ${data66.location} (🪨 static expression)</li>
-      <li>Hello, my current location:<span id="op"></span> (⚡ dynamic expression)</li>
+      <li>Hello, my current location: <span id="op">${data66.current}</span> (⚡ dynamic expression)</li>
     </ul>
 `
 

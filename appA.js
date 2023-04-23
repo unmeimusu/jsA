@@ -114,5 +114,10 @@ const list2 = html`
     </ul>
 `
 
+function addItem(e) {
+  e.preventDefault()
+  const input = document.getElementById("")
+}
+
 list2(d("app"))
 

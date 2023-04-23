@@ -63,7 +63,7 @@ watch(total2)
 data25.price = 5
 // Example: Coding style with && and then return as parameter value
 watch(
-  () => data25.logTotal && data25.quantit, // value passed to parameter
+  () => data25.logTotal && data25.quantity, // value passed to parameter
   (total) => total !== false && console.log(`Total (Concise Code): ${total}`)
 )
 
@@ -98,9 +98,15 @@ t2(d("app"))
 
 // Mapping list data
 const data66 = reactive({
-  location: ["World","Mars","Pluto"],
-  current: ""
+  location: ["World","Mars","Pluto"]
 })
+
+const x = document.getElementById("selct")
+const y = document.getElementsByName("option")[x].value
+
+watch(
+  () => document.getElementById("op").innerHTML = x , // value passed to parameter
+)
 
 const list2 = html`
     <label>Data location : </label>
@@ -111,12 +117,9 @@ const list2 = html`
     </select>
     <ul>
       <li>Hello list location: ${data66.location} (🪨 static expression)</li>
-      <li>Hello, my current location:<span id="op">${() => {y[x].text}}</span> (⚡ dynamic expression)</li>
+      <li>Hello, my current location:<span id="op"></span> (⚡ dynamic expression)</li>
     </ul>
 `
-
-var x = document.getElementById("selct").selectedIndex
-var y = document.getElementsByTagName("option")
 
 list2(d("app"))
 

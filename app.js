@@ -27,8 +27,8 @@ function printSc(sc) {
 printSc("Hello")
 
 // #3 Selected Value in Dropdown List
-const choiceSelect = document.getElementById("choice-select").value
-choiceSelect.addEventListener("change", handleSelectChange)
+const choiceSelect = document.getElementById("choice-select")
+choiceSelect.addEventListener("change", handleSelectChange())
 
 function handleSelectChange(event) {
     const currentValue = event.target.value

@@ -109,7 +109,7 @@ const list2 = html`
         al => html`<option value="${()=>al}" selected>${()=>al}</option>`
       )}
     </select>
-    <button oncclick="selectedOpt">Check</button>
+    <button onclick="${selectedOpt()}">Check</button>
     <ul>
       <li>Hello list location: ${data66.location} (🪨 static expression)</li>
       <li>Hello, my current location: ${y[x].text} (⚡ dynamic expression)</li>

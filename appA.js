@@ -105,7 +105,7 @@ const list2 = html`
     <label>Data location : </label>
     <select>
       ${()=> data66.location.map(
-        al => html`<option value="">${()=>al}</option>`
+        al => html`<option id="inpt" value="">${()=>al}</option>`
       )}
     </select>
     <ul>
@@ -116,7 +116,8 @@ const list2 = html`
 
 function addItem(e) {
   e.preventDefault()
-  const input = document.getElementById("")
+  const input = document.getElementById("inpt")
+  
 }
 
 list2(d("app"))

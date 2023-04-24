@@ -1,18 +1,13 @@
 
-
+import {useState} from "./r/react.development.js"
 
 
 function MyApp() {
-    let $message = "Hello, there"
-    $ => {
-        return () => {
-            
-        }
-    }
+    const [message, setMessage] = usestate("Test")
     return 
     <div>
         <h1>Hello, World</h1>
-        <h2>{$message}</h2>
+        <h2>{message}</h2>
     </div>
 }
 

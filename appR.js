@@ -1,7 +1,3 @@
-
-// import {useState} from "./r/react.development.js"
-import useState from "./r/react.development"
-
 function MyApp() {
     const [message, setMessage] = usestate("Test")
     return 

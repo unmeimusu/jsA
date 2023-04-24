@@ -1,6 +1,7 @@
 function MyApp() {
-    return 
+    return (
     <div>Hello</div>
+    )
 }
 
 const container = document.getElementById('root')

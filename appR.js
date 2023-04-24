@@ -1,10 +1,6 @@
 function MyApp() {
-    const [message, setMessage] = useState("Test")
     return 
-    <div>
-        <h1>Hello, World</h1>
-        <h2>{message}</h2>
-    </div>
+    <div>Hello</div>
 }
 
 const container = document.getElementById('root')

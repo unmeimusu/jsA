@@ -9,8 +9,10 @@ const root = ReactDOM.createRoot(container)
 root.render(<MyApp/>)
 
  */
-
-reactDOM.render(
-    <h1>Hello, React!</h1>,
-    document.getElementById("root")
-)
+function Message() {
+    return (
+        <>
+            <div>Hello</div>
+        </>
+    )
+}

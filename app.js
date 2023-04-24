@@ -28,7 +28,8 @@ printSc("Hello")
 
 // #3 Selected Value in Dropdown List
 const c = document.getElementById("choice-select")
-const value = c.value
-const text = c.options[c.selectedIndex].text
+const so = c.options[c.selectedIndex]
+const t = so.text
+const v = so.value
 
-document.getElementById("txt").innerHTML = text
+document.getElementById("txt").innerHTML = "Choice is: " + v + " " + t

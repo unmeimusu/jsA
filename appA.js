@@ -101,10 +101,14 @@ const data66 = reactive({
   location: ["World","Mars","Pluto"],
 })
 
-const s = document.getElementById("select-opt")
-const so = s.options[s.selectedIndex]
-const tx = so.text
-const vl = so.value
+function sof() {
+  const s = document.getElementById("select-opt")
+  const so = s.options[s.selectedIndex]
+  const tx = so.text
+  const vl = so.value
+}
+
+watch(sof)
 
 const list2 = html`
     <label>Data location : </label>

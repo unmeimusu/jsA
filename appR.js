@@ -1,5 +1,11 @@
+const [message, setMessage] = useState("Test")
+
 function MyApp() {
-    return <h1>Hello, World</h1>
+    return 
+    <div>
+        <h1>Hello, World</h1>
+        <h2>{message}</h2>
+    </div>
 }
 
 const container = document.getElementById('root')

@@ -103,8 +103,8 @@ const data66 = reactive({
 
 const s = document.getElementById("select-opt")
 const so = s.options[s.selectedIndex]
-const text = so.text
-const value = so.value
+const tx = so.text
+const vl = so.value
 
 const list2 = html`
     <label>Data location : </label>
@@ -115,7 +115,7 @@ const list2 = html`
     </select>
     <ul>
       <li>Hello list location: ${data66.location} (🪨 static expression)</li>
-      <li>Hello, my current location: <span id="op">${text}</span> (⚡ dynamic expres}sion)</li>
+      <li>Hello, my current location: <span id="op">${tx}</span> (⚡ dynamic expres}sion)</li>
     </ul>
 `
 

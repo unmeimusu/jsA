@@ -133,7 +133,12 @@ ReactDOM.render(
 
 // Hooks : alternative of setState (which only with class components) but inside functional components.
 function Reactf() {
-    const [name, setName] = useState("David")
+    const [name, setName] = useState("Bro")
 
     return <h1>Hello, {name}</h1>
 }
+
+ReactDOM.render(
+    <Reactf/>,
+    document.getElementById("root8")
+)

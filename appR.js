@@ -285,13 +285,12 @@ function ItemManager(props) {
         </div>
     )
 }
-
-ReactDOM.createRoot(
+/* ReactDOM.createRoot(
     // eStatic,
     <ItemManager data={items}/>,
     document.getElementById("r12")
-)
-
+) */
+ro("r12").render(<ItemManager data={items}/>)
 // Exercise : repeat
 function Form() {
     const [item, setItem] = useState("")
@@ -333,11 +332,9 @@ const els = (
     </div>
 )
 
-ReactDOM.render(
-    // els,
-    <div>
-        <Form/>
-        <List/>
-    </div>,
+/* ReactDOM.render(
+    els,
     document.getElementById("r13")
-)
+) */
+
+ro("r13").render(els)

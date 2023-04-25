@@ -221,10 +221,19 @@ ReactDOM.render(
     document.getElementById("r11")
 )
 
+// Event Listener
 function AddPersonForm() {
     const [person,setPerson] = useState("")
 
     function handleChange(e) {
         setPerson(e.target.value)
     }
+    function handleSubmit(e) {
+        e.preventDefault()
+    }
+    return (
+        <form onSubmit={handleSubmit} action="">
+            
+        </form>
+    )
 }

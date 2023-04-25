@@ -220,3 +220,11 @@ ReactDOM.render(
     <Myl data={al}/>,
     document.getElementById("r11")
 )
+
+function AddPersonForm() {
+    const [person,setPerson] = useState("")
+
+    function handleChange(e) {
+        setPerson(e.target.value)
+    }
+}

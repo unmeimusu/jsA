@@ -199,3 +199,8 @@ function Converter() {
         <p>{km} km is {convert(km)} miles</p>
     </div>
 }
+
+ReactDOM.render(
+    <Converter/>,
+    document.getElementById("root10")
+)

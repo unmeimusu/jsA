@@ -136,7 +136,7 @@ function Reactf() {
     const [name, setName] = useState("Bro")
 
     return <div>
-        <h1>Hello, {name}</h1></div>
+        <h1>Hello, {name}.</h1></div>
 }
 
 ReactDOM.render(

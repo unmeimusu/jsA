@@ -60,3 +60,13 @@ ReactDOM.render(
     <div>{hl}{mhl}</div>,
     document.getElementById("root3")
 )
+
+// Class Component with props
+
+class Button extends React.Component {
+    render() {
+        return <span>How are you?, {this.props.name}</span>
+    }
+}
+
+const bl = <Button name="Maria"/>

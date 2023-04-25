@@ -154,7 +154,6 @@ ReactDOM.render(
 )
 
 // Lifecycle Methods : class-based method 
-// will run once except for triggered event from event handler
 class Countlc extends React.Component {
     state = {
         counter: 0
@@ -164,10 +163,12 @@ class Countlc extends React.Component {
         this.setState({counter: this.state.counter+1})
     }
     componentDidMount() {
+        // will run once except for triggered event from event handler
         console.log("componentDidMount() lifecycle")
         this.setState({counter: 42})
     }
     componentWillUnmount() {
+        // invoked before a component is unmounted and destroyed
         console.log("componentWillUnmount() lifecycle")
     }
     render() {

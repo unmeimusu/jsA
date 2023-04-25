@@ -132,6 +132,8 @@ ReactDOM.render(
 )
 
 // Hooks : alternative of setState (which only with class components) but inside functional components.
-function Ustate() {
+function ReactF() {
+    const [name, setName] = useState("David")
+
     return <h1>Hello, {name}</h1>
 }

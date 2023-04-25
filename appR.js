@@ -183,3 +183,19 @@ ReactDOM.render(
     <Countlc/>,
     document.getElementById("root9")
 )
+
+// Event Handler
+function Converter() {
+    const [km,setKm] = useState(0)
+
+    function handleChange(e) {
+        setKm(e.target.value)
+    }
+    function convert(Km) {
+        return (Km/1.609).toFixed(2)
+    }
+    return <div>
+        <input type="text" value={km} onChange={handleChange}/>
+        <p>{km} km is {convert(km)} miles</p>
+    </div>
+}

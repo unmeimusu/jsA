@@ -131,7 +131,9 @@ ReactDOM.render(
     document.getElementById("root7")
 )
 
-// Hooks : alternative of setState (which only with class components) but inside functional components.
+// Hooks
+// (Module only)
+// alternative of setState (which only with class components) but inside functional components.
 function Reactf() {
     const [name, setName] = useState("Bro")
 

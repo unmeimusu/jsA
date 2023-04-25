@@ -300,8 +300,8 @@ function Form() {
     return ( 
     <div>
         <h1>Exercise</h1>
-        <form action="" onSubmit={HandlSub}>
-            <input type="text" placeholder="input your text" onChange={item}/>
+        <form action="" onSubmit={handlSubmt}>
+            <input type="text" placeholder="input your text" onChange={handlChang}/>
             <button type="Submit">Add</button>
         </form>
     </div>

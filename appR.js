@@ -135,8 +135,7 @@ ReactDOM.render(
 function Reactf() {
     const [name, setName] = useState("Bro")
 
-    return <div>
-        <h1>Hello, {name}.</h1></div>
+    return <h1>Hello, {name}.</h1>
 }
 
 ReactDOM.render(

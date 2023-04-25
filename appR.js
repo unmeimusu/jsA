@@ -230,7 +230,7 @@ function Addform(props) {
         setItem(e.target.value) // set item from the form value
     }
     function handleSubmit(e) {
-        if(person !== '') {
+        if (item !== '') {
             // linked : props after itemManager component build
             props.handleSubmit(item)
             setItem("")

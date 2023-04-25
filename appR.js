@@ -152,4 +152,32 @@ ReactDOM.render(
     document.getElementById("root8")
 )
 
-// Lifecycle Methods : class-based method
+// Lifecycle Methods : class-based method 
+// will run once except for triggered event from event handler
+class Countlc extends React.Component {
+    state = {
+        counter: 0
+    }
+    increment = () => {
+        console.log("increment() lifecycle")
+        this.setState({counter: this.state.counter+1})
+    }
+    componentDidMount() {
+        console.log("componentDidMount() lifecycle")
+        this.setState({counter: 42})
+    }
+    componentWillUnmount() {
+        console.log("componentWillUnmount() lifecycle")
+    }
+    render() {
+        return <div>
+            <p>{this.state.counter}</p>
+            <button onClick={this.increment}>Increment</button>
+        </div>
+    }
+}
+
+ReactDOM.render(
+    <Countlc/>,
+    document.getElementById("root9")
+)

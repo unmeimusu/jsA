@@ -101,14 +101,14 @@ const data66 = reactive({
   location: ["World","Mars","Pluto"],
 })
 
-function sof() {
+/* function sof() {
   const s = document.getElementById("select-opt")
   const so = s.options[s.selectedIndex]
   const tx = so.text
   const vl = so.value
 }
 
-watch(sof)
+watch(sof) */
 
 const list2 = html`
     <label>Data location : </label>
@@ -119,7 +119,7 @@ const list2 = html`
     </select>
     <ul>
       <li>Hello list location: ${data66.location} (🪨 static expression)</li>
-      <li>Hello, my current location: <span id="op">${tx}</span> (⚡ dynamic expres}sion)</li>
+      <li>Hello, my current location: <span id="op">${sof}</span> (⚡ dynamic expression)</li>
     </ul>
 `
 

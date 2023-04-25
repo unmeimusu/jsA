@@ -290,7 +290,8 @@ ReactDOM.render(
 // Exercise : repeat
 function Form() {
 
-    return ( <div>
+    return ( 
+    <div>
         <h1>Exercise</h1>
         <form action="">
             <input type="text" placeholder="input your text" onChange=""/>
@@ -300,3 +301,13 @@ function Form() {
     )
 }
 
+function List() {
+    const list = []
+    return (
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    )
+}

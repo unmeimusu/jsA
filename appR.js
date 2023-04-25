@@ -18,7 +18,8 @@ function show() {
 /*     ReactDOM.render(
         el,document.getElementById("r")
     ) */
-    ro("r").render(el)
+    const root = ReactDOMClient.createRoot(document.getElementById("r"))
+    root.render(el)
 }
 setInterval(show,1000)
 

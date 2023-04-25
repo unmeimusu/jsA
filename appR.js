@@ -91,5 +91,17 @@ ReactDOM.render(
 
 // State : props in a class that is reactive to change the value of an object's key
 class Reactit extends React.Component {
-    
+    state = {
+        message: "I'm a message from state which is reactive."
+    }
+
+    render() {
+        return <h1>Hello, {this.state.message}</h1>
+    }
 }
+
+const rl = <Reactit/>
+ReactDOM.render(
+    rl,
+    document.getElementById("root6")
+)

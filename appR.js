@@ -4,7 +4,7 @@
     document.getElementById("r")
 ) */
 
-const ReactDOMClient = React
+const ReactDOMClient = ReactDOM
 
 function ro(id) {
     return ReactDOM.createRoot(document.getElementById(id))

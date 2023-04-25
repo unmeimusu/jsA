@@ -4,7 +4,7 @@
     document.getElementById("r")
 ) */
 
-const {ReactDOMClient} = React
+const ReactDOMClient = React
 
 function ro(id) {
     return ReactDOM.createRoot(document.getElementById(id))
@@ -328,14 +328,12 @@ function List() {
     </div>
     )
 }
-
 const els = (
     <div>
         <Form/>
         <List/>
     </div>
 )
-
 /* ReactDOM.render(
     els,
     document.getElementById("r13")

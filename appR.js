@@ -1,8 +1,8 @@
 // DOM render
-/* ReactDOM.render(
+ReactDOM.render(
     <h1>Hello, React!</h1>,
     document.getElementById("root")
-) */
+)
 
 let counter = 0
 
@@ -27,6 +27,6 @@ function Section() {
 const el = <Hello/>
 const sl = <Section/>
 ReactDOM.render(
-        sl,
+        <div>{el}{sl}</div>,
         document.getElementById("root")
 )

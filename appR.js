@@ -299,7 +299,7 @@ function Form() {
     const handlChang = (e) => setItem(e.target.value)
 
     const handlSubmt = (e) => {
-        e.preventDefault
+        e.preventDefault()
     }
 
     return ( 

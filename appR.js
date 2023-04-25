@@ -321,10 +321,14 @@ function List() {
     )
 }
 
-ReactDOM.render(
+const els = (
     <div>
         <Form/>
         <List/>
-    </div>,
+    </div>
+)
+
+ReactDOM.render(
+    els,
     document.getElementById("r13")
 )

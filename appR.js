@@ -73,3 +73,17 @@ ReactDOM.render(
     <div>{bl}</div>,
     document.getElementById("root4")
 )
+
+// Multiple props for multiple arguments on a component
+function Item(props) {
+    return <div className="item">
+        <b>Name: </b><span>{props.name}</span><br />
+        <b>Price: </b><span>{props.price}</span>
+    </div>
+}
+
+const il = <Item name="Mask" price="$5.99"></Item>
+ReactDOM.render(
+    il,
+    document.getElementById("root5")
+)

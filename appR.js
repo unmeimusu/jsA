@@ -222,6 +222,7 @@ ReactDOM.render(
 )
 
 // Event Methods and Properties
+// Component 1
 function Addform() {
     const [item,setItem] = useState("")
 
@@ -242,7 +243,7 @@ function Addform() {
     </div>
     )
 }
-
+// Component 2
 function Itemlist(props) {
     const a = props.data
     const i = a.map((val,idx) => 

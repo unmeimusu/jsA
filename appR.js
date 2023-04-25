@@ -223,8 +223,8 @@ ReactDOM.render(
 
 // Event Methods and Properties: data flow from parent to child components
 // Component 1
-function Addform(props) {
-    const [item,setItem] = useState(props.data)
+function Addform() {
+    const [item,setItem] = useState()
 
     function handleChange(e) {
         setItem(e.target.value) // set item from the form value

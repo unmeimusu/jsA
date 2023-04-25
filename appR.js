@@ -41,7 +41,7 @@ ReactDOM.render(
     cl,
     document.getElementById('root2')
 )
-// Functional Component with Props to initial an argumant
+// Functional Component with Props (read-only and cannot be modified) to initial an argumant
 function Header(props) {
     return <p>A props for {props.name} Component</p>
 }
@@ -108,14 +108,14 @@ ReactDOM.render(
     document.getElementById("root6")
 )
 
-// setState: re-render after state changed.
+// setState: re-render the whole DOM after state is changed.
 class Counter extends React.Component {
     state = {
         counter: 0
     }
     increment = () => {
         this.setState({
-            counter: this.state.counter++
+            counter: this.state.counter+1
         })
     }
     render() {
@@ -130,3 +130,4 @@ ReactDOM.render(
     <Counter/>,
     document.getElementById("root7")
 )
+

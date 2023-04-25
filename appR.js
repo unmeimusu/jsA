@@ -1,8 +1,14 @@
 // DOM render
-ReactDOM.render(
+/* ReactDOM.render(
     <h1>Hello, React!</h1>,
     document.getElementById("r")
-)
+) */
+
+const { createRoot } = React
+
+const co = document.getElementById("r")
+const ro = createRoot(co)
+ro.render(<h1>Hello, React!</h1>)
 
 let counter = 0
 

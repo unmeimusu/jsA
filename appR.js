@@ -22,7 +22,8 @@ function Hello() {
     return <div>Hello World.</div>
 }
 const el = <Hello/>
+setTimeout(
 ReactDOM.render(
     el,
     document.getElementById("root")
-)
+),2000)

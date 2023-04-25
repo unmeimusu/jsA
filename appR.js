@@ -18,6 +18,11 @@ setInterval(show,1000)
 
 // Components
 // Functional Component - It's return DOM
-function hello() {
+function Hello() {
     return <div>Hello World.</div>
 }
+const el = <Hello/>
+ReactDOM.render(
+    el,
+    document.getElementById("root")
+)

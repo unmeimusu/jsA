@@ -41,7 +41,13 @@ ReactDOM.render(
     cl,
     document.getElementById('root2')
 )
-// Functional Component with Props
+// Functional Component with Props to initial an argumant
 function Header(props) {
-    return <p>A props for Header Component, named</p>
+    return <p>A props for {props.name} Component</p>
 }
+
+const hl = <Header name="Header"/>
+ReactDOM.render(
+    hl,
+    document.getElementById("root3")
+)

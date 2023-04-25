@@ -83,7 +83,9 @@ function Item(props) {
 }
 
 const il = <Item name="Mask" price="$5.99"></Item>
-createRoot.render(
+/* ReactDOM.render(
     il,
     document.getElementById("root5")
-)
+) */
+
+createRoot(il,"root5")

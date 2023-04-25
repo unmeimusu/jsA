@@ -1,7 +1,7 @@
 // DOM render
 ReactDOM.render(
     <h1>Hello, React!</h1>,
-    document.getElementById("root")
+    document.getElementById("r")
 )
 
 let counter = 0
@@ -11,7 +11,7 @@ function show() {
     counter++
     const el = <p>{counter}</p>
     ReactDOM.render(
-        el,document.getElementById("root")
+        el,document.getElementById("r")
     )
 }
 setInterval(show,1000)
@@ -28,7 +28,7 @@ const el = <Hello/>
 const sl = <Section/>
 ReactDOM.render(
         <div>{el}{sl}</div>,
-        document.getElementById("root1")
+        document.getElementById("r1")
 )
 // Class Components
 class Text extends React.Component {
@@ -39,7 +39,7 @@ class Text extends React.Component {
 const cl = <Text/>
 ReactDOM.render(
     cl,
-    document.getElementById('root2')
+    document.getElementById('r2')
 )
 // Functional Component with Props (read-only and cannot be modified) to initial an argumant
 function Header(props) {
@@ -58,7 +58,7 @@ const hl = <Header name="Header"/>
 const mhl = <Multi/>
 ReactDOM.render(
     <div>{hl}{mhl}</div>,
-    document.getElementById("root3")
+    document.getElementById("r3")
 )
 
 // Class Component with props
@@ -71,7 +71,7 @@ class Button extends React.Component {
 const bl = <Button name="Maria"/>
 ReactDOM.render(
     <div>{bl}</div>,
-    document.getElementById("root4")
+    document.getElementById("r4")
 )
 
 // Multiple props for multiple arguments on a component
@@ -86,7 +86,7 @@ const il = <Item name="Mask" price="$5.99"></Item>
 
 ReactDOM.render(
     il,
-    document.getElementById("root5")
+    document.getElementById("r5")
 )
 
 // State : props in a class that is to change the value of an object's key
@@ -105,7 +105,7 @@ class Reactit extends React.Component {
 const rl = <Reactit/>
 ReactDOM.render(
     rl,
-    document.getElementById("root6")
+    document.getElementById("r6")
 )
 
 // setState: re-render the whole DOM after state is changed.
@@ -128,7 +128,7 @@ class Counter extends React.Component {
 
 ReactDOM.render(
     <Counter/>,
-    document.getElementById("root7")
+    document.getElementById("r7")
 )
 
 // Hooks
@@ -150,7 +150,7 @@ function Reactf() {
 
 ReactDOM.render(
     <Reactf/>,
-    document.getElementById("root8")
+    document.getElementById("r8")
 )
 
 // Lifecycle Methods : class-based method 
@@ -181,7 +181,7 @@ class Countlc extends React.Component {
 
 ReactDOM.render(
     <Countlc/>,
-    document.getElementById("root9")
+    document.getElementById("r9")
 )
 
 // Event Handler
@@ -202,7 +202,7 @@ function Converter() {
 
 ReactDOM.render(
     <Converter/>,
-    document.getElementById("root10")
+    document.getElementById("r10")
 )
 
 // List to DOM
@@ -218,5 +218,5 @@ function Myl(props) {
 
 ReactDOM.render(
     <Myl data={al}/>,
-    document.getElementById("root11")
+    document.getElementById("r11")
 )

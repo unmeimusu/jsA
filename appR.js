@@ -205,7 +205,7 @@ ReactDOM.render(
     document.getElementById("r10")
 )
 
-// List : print listed items to the DOM
+// List with index : print listed items to the DOM
 const al = ["A","B","C"]
 
 function Myl(props) {

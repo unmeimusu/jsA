@@ -221,7 +221,7 @@ ReactDOM.render(
     document.getElementById("r11")
 )
 
-// Event Methods and Properties: data flow from parent to child components
+// Event Methods and Properties
 // Component 1
 function Addform() {
     const [item,setItem] = useState()
@@ -260,6 +260,18 @@ const e = (
         <Itemlist data={items}/>
     </div>
 )
+
+// Parent Component : data flow from parent to child components ( unindirectional data )
+function ItemManager(props) {
+    const [items,setItems] = useState(props.data)
+
+    return (
+        <div>
+            <Addform/>
+            <Itemlist data={items}/>
+        </div>
+    )
+}
 
 ReactDOM.render(
     e,

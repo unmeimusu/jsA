@@ -204,3 +204,19 @@ ReactDOM.render(
     <Converter/>,
     document.getElementById("root10")
 )
+
+// List to DOM
+const al = ["A","B","C"]
+
+function Myl(props) {
+    const arr = props.data
+    const listItems = arr.map((val)=>
+        <li>{val}</li>
+    )
+    return <ul>{listItems}</ul>
+}
+
+ReactDOM.render(
+    <Myl data={al}/>,
+    document.getElementById("root11")
+)

@@ -108,7 +108,25 @@ ReactDOM.render(
     document.getElementById("root6")
 )
 
-// setState Changing State.
+// setState: re-render after state changed.
 class Counter extends React.Component {
-    
+    state = {
+        counter: 0
+    }
+    increment = () => {
+        this.setState({
+            counter: this.state.counter++
+        })
+    }
+    render() {
+        return <div>
+            <p>{this.state.counter}</p>
+            <button onClick={this.increment}>Increase</button>
+        </div>
+    }
 }
+
+ReactDOM.render(
+    <Counter/>,
+    document.getElementById("root7")
+)

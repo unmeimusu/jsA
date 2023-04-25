@@ -230,9 +230,11 @@ function Addform(props) {
         setItem(e.target.value) // set item from the form value
     }
     function handleSubmit(e) {
-        // linked : props after itemManager component build
-        props.handleSubmit(item)
-        setItem("")
+        if(person !== '') {
+            // linked : props after itemManager component build
+            props.handleSubmit(item)
+            setItem("")
+        }
         // to prevent the default event on cancelable events
         e.preventDefault()
     }

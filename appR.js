@@ -109,3 +109,6 @@ ReactDOM.render(
 )
 
 // setState Changing State.
+class Counter extends React.Component {
+    
+}

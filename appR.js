@@ -27,6 +27,6 @@ function Section() {
 const el = <Hello/>
 const sl = <Section/>
 ReactDOM.render(
-        el,sl,
+        sl,
         document.getElementById("root")
 )

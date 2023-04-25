@@ -1,8 +1,8 @@
 // DOM render
-ReactDOM.render(
+/* ReactDOM.render(
     <h1>Hello, React!</h1>,
     document.getElementById("root")
-)
+) */
 
 let counter = 0
 
@@ -21,10 +21,12 @@ setInterval(show,1000)
 function Hello() {
     return <div>Hello World.</div>
 }
+function Section() {
+    return <section>A section.</section>
+}
 const el = <Hello/>
-setTimeout(
-    ReactDOM.render(
-        el,
+const sl = <Section/>
+ReactDOM.render(
+        el,sl,
         document.getElementById("root")
-),3000)
-
+)

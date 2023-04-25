@@ -235,7 +235,7 @@ function AddPersonForm() {
     return (
     <div>
         <h1>Contact Form</h1>
-        <form onSubmit={handleSubmit} action="">
+        <form /* onSubmit={handleSubmit} */ action="">
             <input type="text" placeholder="Input new item" onChange={handleChange} value={item}/>
             <button type="Submit">Submit</button>
         </form>

@@ -4,8 +4,6 @@
     document.getElementById("r")
 ) */
 
-const ReactDOMClient = ReactDOM
-
 const root = ReactDOM.createRoot(document.querySelector('#r'))
 root.render(<h1>Hello, React!</h1>)
 root.render(<h1>Hello, React!</h1>)
@@ -24,7 +22,6 @@ function show() {
 /*     ReactDOM.render(
         el,document.getElementById("r")
     ) */
-    const root = ReactDOMClient.createRoot(document.getElementById("r"))
     root.render(el)
 }
 setInterval(show,1000)

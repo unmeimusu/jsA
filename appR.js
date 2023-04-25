@@ -312,7 +312,7 @@ const l = ["X","Y"]
 
 function List() {
     const lm = l.map((itms,idx)=>
-        <li>{itms} : on index {idx}</li>
+        <li key={idx}>{itms} : on index {idx}</li>
     )
     return (
     <div>

@@ -41,3 +41,7 @@ ReactDOM.render(
     cl,
     document.getElementById('root2')
 )
+// Functional Component with Props
+function Header(props) {
+    return <p>A props for Header Component, named</p>
+}

@@ -4,10 +4,8 @@
     document.getElementById("r")
 ) */
 
-const { createRoot } = React
-
 const co = document.getElementById("r")
-const ro = ReactDOM.createRoot(co)
+const ro = createRoot(co)
 ro.render(<h1>Hello, React!</h1>)
 
 let counter = 0
@@ -139,7 +137,7 @@ ReactDOM.render(
 
 // Hooks
 // alternative of setState (which only with class components) but inside functional components.
-const {useState} = React // calling useState from global React to work with babel.min.js
+const {createRoot,useState} = React // calling useState from global React to work with babel.min.js
 
 function Reactf() {
     const [counter, setCounter] = useState(0)

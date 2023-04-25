@@ -5,7 +5,7 @@
 ) */
 
 const co = document.getElementById("r")
-const ro = createRoot(co)
+const ro = ReactDOM.createRoot(co)
 ro.render(<h1>Hello, React!</h1>)
 
 let counter = 0

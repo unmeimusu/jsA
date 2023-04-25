@@ -1,12 +1,13 @@
-// DOM render
+// DOM render, deprecated
 /* ReactDOM.render(
     <h1>Hello, React!</h1>,
     document.getElementById("r")
 ) */
 
-const co = document.getElementById("r")
-const ro = ReactDOM.createRoot(co)
-ro.render(<h1>Hello, React!</h1>)
+function ro(id) {
+    return ReactDOM.createRoot(document.getElementById(id))
+}
+ro("r").render(<h1>Hello, React!</h1>)
 
 let counter = 0
 
@@ -30,10 +31,12 @@ function Section() {
 }
 const el = <Hello/>
 const sl = <Section/>
-ReactDOM.render(
+/* ReactDOM.render(
         <div>{el}{sl}</div>,
         document.getElementById("r1")
-)
+) */
+
+ro("r1").render(<div>{el}{sl}</div>)
 // Class Components
 class Text extends React.Component {
     render() {
@@ -41,10 +44,12 @@ class Text extends React.Component {
     }
 }
 const cl = <Text/>
-ReactDOM.render(
+/* ReactDOM.render(
     cl,
     document.getElementById('r2')
-)
+) */
+ro("r2").render(cl)
+
 // Functional Component with Props (read-only and cannot be modified) to initial an argumant
 function Header(props) {
     return <p>A props for {props.name} Component</p>
@@ -60,11 +65,11 @@ function Multi() {
 
 const hl = <Header name="Header"/>
 const mhl = <Multi/>
-ReactDOM.render(
+/* ReactDOM.render(
     <div>{hl}{mhl}</div>,
     document.getElementById("r3")
-)
-
+) */
+ro("r3").render(<div>{hl}{mhl}</div>)
 // Class Component with props
 class Button extends React.Component {
     render() {
@@ -73,11 +78,11 @@ class Button extends React.Component {
 }
 
 const bl = <Button name="Maria"/>
-ReactDOM.render(
+/* ReactDOM.render(
     <div>{bl}</div>,
     document.getElementById("r4")
-)
-
+) */
+ro("r4").render(<div>{bl}</div>)
 // Multiple props for multiple arguments on a component
 function Item(props) {
     return <div className="item">
@@ -88,11 +93,11 @@ function Item(props) {
 
 const il = <Item name="Mask" price="$5.99"></Item>
 
-ReactDOM.render(
+/* ReactDOM.render(
     il,
     document.getElementById("r5")
-)
-
+) */
+ro("r5").render(il)
 // State : props in a class that is to change the value of an object's key
 class Reactit extends React.Component {
     state = {
@@ -107,11 +112,11 @@ class Reactit extends React.Component {
 }
 
 const rl = <Reactit/>
-ReactDOM.render(
+/* ReactDOM.render(
     rl,
     document.getElementById("r6")
-)
-
+) */
+ro("r6").render(rl)
 // setState: re-render the whole DOM after state is changed.
 class Counter extends React.Component {
     state = {
@@ -129,12 +134,11 @@ class Counter extends React.Component {
         </div>
     }
 }
-
-ReactDOM.render(
+/* ReactDOM.render(
     <Counter/>,
     document.getElementById("r7")
-)
-
+) */
+ro("r7").render(<Counter/>)
 // Hooks
 // alternative of setState (which only with class components) but inside functional components.
 const {createRoot,useState} = React // calling useState from global React to work with babel.min.js
@@ -152,11 +156,11 @@ function Reactf() {
         </div>
 }
 
-ReactDOM.render(
+/* ReactDOM.render(
     <Reactf/>,
     document.getElementById("r8")
-)
-
+) */
+ro("r8").render(<Reactf/>)
 // Lifecycle Methods : class-based method 
 class Countlc extends React.Component {
     state = {
@@ -182,12 +186,11 @@ class Countlc extends React.Component {
         </div>
     }
 }
-
-ReactDOM.render(
+/* ReactDOM.render(
     <Countlc/>,
     document.getElementById("r9")
-)
-
+) */
+ro("r9").render(<Countlc/>)
 // Event Handler
 function Converter() {
     const [km,setKm] = useState(0)
@@ -203,12 +206,11 @@ function Converter() {
         <p>{km} km is {convert(km)} miles</p>
     </div>
 }
-
-ReactDOM.render(
+/* ReactDOM.render(
     <Converter/>,
     document.getElementById("r10")
-)
-
+) */
+ro("r10").render(<Converter/>)
 // List with index : print listed items to the DOM
 const al = ["A","B","C"]
 
@@ -219,12 +221,11 @@ function Myl(props) {
     )
     return <ul>{listItems}</ul>
 }
-
-ReactDOM.render(
+/* ReactDOM.render(
     <Myl data={al}/>,
     document.getElementById("r11")
-)
-
+) */
+ro("r11").render(<Myl data={al}/>)
 // Event Methods and Properties
 // Component 1
 function Addform(props) {

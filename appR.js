@@ -291,7 +291,12 @@ ReactDOM.render(
 function Form() {
 
     return ( <div>
-        <form action=""></form>
+        <h1>Exercise</h1>
+        <form action="">
+            <input type="text" placeholder="input your text" onChange=""/>
+            <button type="Submit" onClick="">Add</button>
+        </form>
     </div>
     )
 }
+

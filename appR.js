@@ -261,10 +261,13 @@ const e = (
     </div>
 )
 
-// Parent Component : data flow from parent to child components ( unindirectional data )
+// Parent Component : data flow from parent to child components ( unidirectional data )
 function ItemManager(props) {
     const [items,setItems] = useState(props.data)
 
+    function addItem(name) {
+        setItems([...items, name])
+    }
     return (
         <div>
             <Addform/>

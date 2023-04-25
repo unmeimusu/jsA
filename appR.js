@@ -222,11 +222,11 @@ ReactDOM.render(
 )
 
 // Event Methods and Properties
-function AddPersonForm() {
+function Addform() {
     const [item,setItem] = useState("")
 
     function handleChange(e) {
-        setItem(e.target.value)
+        setItem(e.target.value) // set item from the form value
     }
     function handleSubmit(e) {
         // to prevent the default event on cancelable events
@@ -243,7 +243,24 @@ function AddPersonForm() {
     )
 }
 
+function Itemlist(props) {
+    const a = props.data
+    const i = a.map((val,idx) => 
+        <li key={idx}>{val}</li>
+    )
+    return <ul>{i}</ul>
+}
+
+const items = ["J","T","A","B"]
+
+const e = (
+    <div>
+        <Addform/>
+        <Itemlist data={items}/>
+    </div>
+)
+
 ReactDOM.render(
-    <AddPersonForm/>,
+    <Addform/>,
     document.getElementById("r12")
 )

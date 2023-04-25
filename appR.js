@@ -77,7 +77,7 @@ ReactDOM.render(
 // Multiple props for multiple arguments on a component
 function Item(props) {
     return <div className="item">
-        <b>Name: </b><span>{props.name}</span><br />
+        <b>Name: </b><span>{props.item}</span><br />
         <b>Price: </b><span>{props.price}</span>
     </div>
 }

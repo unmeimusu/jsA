@@ -289,25 +289,32 @@ ReactDOM.render(
 
 // Exercise : repeat
 function Form() {
+    const [item, setItem] = useState("")
+
+    handlSubmt = (e) => {setItem(e.target.value)}
+
+    handlChng = () => {}
 
     return ( 
     <div>
         <h1>Exercise</h1>
-        <form action="">
+        <form action="" onSubmit={HandlSub}>
             <input type="text" placeholder="input your text" onChange=""/>
-            <button type="Submit" onClick="">Add</button>
+            <button type="Submit">Add</button>
         </form>
     </div>
     )
 }
 
+const l = []
+
 function List() {
-    const list = []
+    const lm = l.map((itms,idx)=>
+        <li>{itms} : on index {idx}</li>
+    )
     return (
     <div>
-        <ul>
-            <li></li>
-        </ul>
+        <ul>{lm}</ul>
     </div>
     )
 }

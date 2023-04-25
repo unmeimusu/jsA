@@ -329,6 +329,10 @@ const els = (
 )
 
 ReactDOM.render(
-    els,
+    // els,
+    <div>
+        <Form/>
+        <List/>
+    </div>,
     document.getElementById("r13")
 )

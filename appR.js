@@ -28,11 +28,16 @@ const el = <Hello/>
 const sl = <Section/>
 ReactDOM.render(
         <div>{el}{sl}</div>,
-        document.getElementById("root")
+        document.getElementById("root1")
 )
 // Class Components
-class Hello extends React.Component {
+class Text extends React.Component {
     render() {
-        return <h1>Hello World.</h1>
+        return <p>Morning today, have a nice day.</p>
     }
 }
+const cl = <Text/>
+ReactDOM.render(
+    cl,
+    document.getElementById('root2')
+)

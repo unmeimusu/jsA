@@ -230,7 +230,7 @@ function Addform(props) {
         setItem(e.target.value) // set item from the form value
     }
     function handleSubmit(e) {
-        // props after itemManager component build
+        // linked : props after itemManager component build
         props.handleSubmit(item)
         setItem("")
         // to prevent the default event on cancelable events
@@ -267,13 +267,13 @@ const e = (
 // Parent Component : data flow from parent to child components ( unidirectional data )
 function ItemManager(props) {
     const [items,setItems] = useState(props.data)
-
+    // linked
     function addItem(name) {
         setItems([...items, name])
     }
     return (
         <div>
-            <Addform/>
+            <Addform handleSubmit={addItem}/>
             <Itemlist data={items}/>
         </div>
     )

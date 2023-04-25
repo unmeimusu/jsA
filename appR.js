@@ -221,19 +221,29 @@ ReactDOM.render(
     document.getElementById("r11")
 )
 
-// Event Listener
+// Event Methods and Properties
 function AddPersonForm() {
-    const [person,setPerson] = useState("")
+    const [item,setItem] = useState("")
 
     function handleChange(e) {
         setPerson(e.target.value)
     }
     function handleSubmit(e) {
+        // to prevent the default event on cancelable events
         e.preventDefault()
     }
     return (
+    <div>
+        <h1>Contact Form</h1>
         <form onSubmit={handleSubmit} action="">
-            
+            <input type="text" placeholder="Input new item" onChange={handleChange} value={item}/>
+            <button type="Submit">Submit</button>
         </form>
+    </div>
     )
 }
+
+ReactDOM.render(
+    <AddPersonForm/>,
+    document.getElementById("r12")
+)

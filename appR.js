@@ -291,15 +291,17 @@ ReactDOM.render(
 function Form() {
     const [item, setItem] = useState("")
 
-    handlSubmt = (e) => {setItem(e.target.value)}
+    handlChang = (e) => setItem(e.target.value)
 
-    handlChng = () => {}
+    handlSubmt = (e) => {
+        e.preventDefault
+    }
 
     return ( 
     <div>
         <h1>Exercise</h1>
         <form action="" onSubmit={HandlSub}>
-            <input type="text" placeholder="input your text" onChange=""/>
+            <input type="text" placeholder="input your text" onChange={item}/>
             <button type="Submit">Add</button>
         </form>
     </div>

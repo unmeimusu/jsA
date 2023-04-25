@@ -131,3 +131,7 @@ ReactDOM.render(
     document.getElementById("root7")
 )
 
+// Hooks : alternative of setState (which only with class components) but inside functional components.
+function Ustate() {
+    return <h1>Hello, {name}</h1>
+}

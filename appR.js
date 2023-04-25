@@ -132,7 +132,7 @@ ReactDOM.render(
 )
 
 // Hooks
-// (Module only)
+// (Module only, not working with babel.min.js)
 // alternative of setState (which only with class components) but inside functional components.
 function Reactf() {
     const [name, setName] = useState("Bro")
@@ -144,3 +144,4 @@ ReactDOM.render(
     <Reactf/>,
     document.getElementById("root8")
 )
+

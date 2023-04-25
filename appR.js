@@ -256,7 +256,7 @@ const items = ["J","T","A","B"]
 
 const e = (
     <div>
-        <Addform data={""}/>
+        <Addform data={"Default Text"}/>
         <Itemlist data={items}/>
     </div>
 )

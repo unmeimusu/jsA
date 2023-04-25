@@ -1,4 +1,4 @@
-"use client" // by default server component, use client needed to importing useState
+"use client" // by default server component, "use client" is needed to importing useState
 
 import {useState} from "react"
 

@@ -227,7 +227,7 @@ function Addform(props) {
     const [item,setItem] = useState("")
 
     function handleChange(e) {
-        setItem(e.target.value) // set item from the form value
+        setItem(e.target.value) // set item from the input value
     }
     function handleSubmit(e) {
         if (item !== '') {

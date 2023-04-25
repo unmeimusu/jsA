@@ -135,12 +135,21 @@ ReactDOM.render(
 // (Module only, not working with babel.min.js)
 // alternative of setState (which only with class components) but inside functional components.
 function Reactf() {
-    const [name, setName] = useState("Bro")
+    const [counter, setCounter] = useState(0)
 
-    return <h1>Hello, {name}.</h1>
+    function increment() {
+        setCounter(counter+1);
+    }
+
+    return <div>
+        <h1>Hello, {counter}.</h1>
+        <button onClick={increment}>++</button>
+        </div>
 }
 
 ReactDOM.render(
     <Reactf/>,
     document.getElementById("root8")
 )
+
+// Lifecycle Methods

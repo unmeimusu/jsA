@@ -318,3 +318,9 @@ function List() {
     </div>
     )
 }
+
+ReactDOM.render(
+    <div>
+        <List></List>
+    </div>
+)

@@ -33,3 +33,8 @@ const t = so.text
 const v = so.value
 
 document.getElementById("txt").innerHTML = "Choice is: " + v + " " + t
+
+// #4 List
+const arr = [1,2,3,4]
+const res = arr.map(x=>x*4)
+console.log(res[1])

@@ -231,7 +231,7 @@ function Addform(props) {
     }
     function handleSubmit(e) {
         if (item !== '') {
-            // linked : props after itemManager component build
+            // linked : props to pass down itemManager data to build
             props.handleSubmit(item)
             setItem("")
         }

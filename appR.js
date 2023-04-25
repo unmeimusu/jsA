@@ -132,9 +132,8 @@ ReactDOM.render(
 )
 
 // Hooks
-// (Module only, not working with babel.min.js)
 // alternative of setState (which only with class components) but inside functional components.
-const {useState} = React
+const {useState} = React // calling useState from global React to work with babel.min.js
 
 function Reactf() {
     const [counter, setCounter] = useState(0)

@@ -46,8 +46,17 @@ function Header(props) {
     return <p>A props for {props.name} Component</p>
 }
 
+function Multi() {
+    return <div>
+        <Header name="D"/>
+        <Header name="X"/>
+        <Header name="T"/>
+    </div>
+}
+
 const hl = <Header name="Header"/>
+const mhl = <Multi/>
 ReactDOM.render(
-    hl,
+    <div>{hl}{mhl}</div>,
     document.getElementById("root3")
 )

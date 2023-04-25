@@ -89,7 +89,7 @@ ReactDOM.render(
     document.getElementById("root5")
 )
 
-// State : props in a class that is reactive to change the value of an object's key
+// State : props in a class that is to change the value of an object's key
 class Reactit extends React.Component {
     state = {
         message: "I'm a message from state."
@@ -107,3 +107,5 @@ ReactDOM.render(
     rl,
     document.getElementById("root6")
 )
+
+// setState Changing State.

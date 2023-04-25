@@ -134,7 +134,7 @@ ReactDOM.render(
 // Hooks
 // (Module only, not working with babel.min.js)
 // alternative of setState (which only with class components) but inside functional components.
-function Reactf() {
+/* function Reactf() {
     const [counter, setCounter] = useState(0)
 
     function increment() {
@@ -151,7 +151,7 @@ ReactDOM.render(
     <Reactf/>,
     document.getElementById("root8")
 )
-
+ */
 // Lifecycle Methods : class-based method 
 // will run once except for triggered event from event handler
 class Countlc extends React.Component {

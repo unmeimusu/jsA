@@ -30,3 +30,9 @@ ReactDOM.render(
         <div>{el}{sl}</div>,
         document.getElementById("root")
 )
+// Class Components
+class Hello extends React.Component {
+    render() {
+        return <h1>Hello World.</h1>
+    }
+}

@@ -88,3 +88,8 @@ ReactDOM.render(
     il,
     document.getElementById("root5")
 )
+
+// State : props in a class that is reactive to change the value of an object's key
+class Reactit extends React.Component {
+    
+}

@@ -257,7 +257,7 @@ function Itemlist(props) {
 
 const items = ["J","T","A","B"]
 
-const e = (
+const eStatic = (
     <div>
         <Addform/>
         <Itemlist data={items}/>
@@ -280,6 +280,7 @@ function ItemManager(props) {
 }
 
 ReactDOM.render(
-    e,
+    // eStatic,
+    <ItemManager data={items}/>,
     document.getElementById("r12")
 )

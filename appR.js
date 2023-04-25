@@ -281,7 +281,7 @@ function ItemManager(props) {
     )
 }
 
-ReactDOM.render(
+ReactDOM.createRoot(
     // eStatic,
     <ItemManager data={items}/>,
     document.getElementById("r12")

@@ -15,9 +15,10 @@ let counter = 0
 function show() {
     counter++
     const el = <p>{counter}</p>
-    ReactDOM.render(
+/*     ReactDOM.render(
         el,document.getElementById("r")
-    )
+    ) */
+    ro("r").render(el)
 }
 setInterval(show,1000)
 
@@ -295,9 +296,9 @@ ro("r12").render(<ItemManager data={items}/>)
 function Form() {
     const [item, setItem] = useState("")
 
-    handlChang = (e) => setItem(e.target.value)
+    const handlChang = (e) => setItem(e.target.value)
 
-    handlSubmt = (e) => {
+    const handlSubmt = (e) => {
         e.preventDefault
     }
 
@@ -336,5 +337,4 @@ const els = (
     els,
     document.getElementById("r13")
 ) */
-
 ro("r13").render(els)

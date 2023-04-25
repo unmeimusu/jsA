@@ -223,8 +223,8 @@ ReactDOM.render(
 
 // Event Methods and Properties
 // Component 1
-function Addform() {
-    const [item,setItem] = useState("")
+function Addform(props) {
+    const [item,setItem] = useState(props.data)
 
     function handleChange(e) {
         setItem(e.target.value) // set item from the form value
@@ -262,6 +262,6 @@ const e = (
 )
 
 ReactDOM.render(
-    <Addform/>,
+    e,
     document.getElementById("r12")
 )

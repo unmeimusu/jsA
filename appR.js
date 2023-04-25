@@ -321,6 +321,8 @@ function List() {
 
 ReactDOM.render(
     <div>
-        <List></List>
-    </div>
+        <Form/>
+        <List/>
+    </div>,
+    document.getElementById("r13")
 )

@@ -23,7 +23,8 @@ function Hello() {
 }
 const el = <Hello/>
 setTimeout(
-ReactDOM.render(
-    el,
-    document.getElementById("root")
-),2000)
+    ReactDOM.render(
+        el,
+        document.getElementById("root")
+),3000)
+

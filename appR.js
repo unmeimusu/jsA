@@ -308,7 +308,7 @@ function Form() {
     )
 }
 
-const l = []
+const l = ["X","Y"]
 
 function List() {
     const lm = l.map((itms,idx)=>

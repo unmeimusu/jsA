@@ -226,7 +226,7 @@ function AddPersonForm() {
     const [item,setItem] = useState("")
 
     function handleChange(e) {
-        setPerson(e.target.value)
+        setItem(e.target.value)
     }
     function handleSubmit(e) {
         // to prevent the default event on cancelable events
@@ -234,8 +234,8 @@ function AddPersonForm() {
     }
     return (
     <div>
-        <h1>Contact Form</h1>
-        <form /* onSubmit={handleSubmit} */ action="">
+        <h1>Add Item</h1>
+        <form onSubmit={handleSubmit} action="">
             <input type="text" placeholder="Input new item" onChange={handleChange} value={item}/>
             <button type="Submit">Submit</button>
         </form>

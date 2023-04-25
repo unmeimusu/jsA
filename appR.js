@@ -221,7 +221,7 @@ ReactDOM.render(
     document.getElementById("r11")
 )
 
-// Event Methods and Properties
+// Event Methods and Properties: data flow from parent to child components
 // Component 1
 function Addform(props) {
     const [item,setItem] = useState(props.data)

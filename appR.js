@@ -152,4 +152,4 @@ ReactDOM.render(
     document.getElementById("root8")
 )
 
-// Lifecycle Methods
+// Lifecycle Methods : class-based method

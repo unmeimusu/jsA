@@ -211,7 +211,7 @@ const al = ["A","B","C"]
 function Myl(props) {
     const arr = props.data
     const listItems = arr.map((val,idx)=>
-        <li key={idx}>{val}</li>
+        <li key={idx}>{val} on index: {idx}</li>
     )
     return <ul>{listItems}</ul>
 }

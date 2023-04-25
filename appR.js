@@ -286,3 +286,12 @@ ReactDOM.render(
     <ItemManager data={items}/>,
     document.getElementById("r12")
 )
+
+// Exercise : repeat
+function Form() {
+
+    return ( <div>
+        <form action=""></form>
+    </div>
+    )
+}

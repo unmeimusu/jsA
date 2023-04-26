@@ -400,4 +400,4 @@ function Manager2(props) {
     )
 }
 
-ro("r14").render(<Manager2/>)
+ro("r14").render(<Manager2 data={lv}/>)

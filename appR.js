@@ -295,6 +295,7 @@ function ItemManager(props) {
     document.getElementById("r12")
 ) */
 ro("r12").render(<ItemManager data={items}/>)
+
 // Exercise : repeat
 function Form() {
     const [item, setItem] = useState("")

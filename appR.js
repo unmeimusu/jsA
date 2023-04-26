@@ -390,9 +390,9 @@ const lv = [2,5]
 
 function Manager2() {
     const [lv, setLv] = useState(props.data)
-/*     function Add(newdata) {
+    function Add(newdata) {
         setLv([...lv, newdata])
-    } */
+    }
     return (
         <div>
             <List2 data={lv}/>

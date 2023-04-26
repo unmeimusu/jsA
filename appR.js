@@ -354,7 +354,7 @@ function Manager(props) {
     return (
         <div>
             <Form handlSubmt={addItem}/>
-            <List data={items}/>
+            <List data={l}/>
         </div>
     )
 }

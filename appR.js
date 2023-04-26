@@ -309,12 +309,11 @@ function Form() {
         }
         e.preventDefault()
     }
-
     return ( 
     <div>
         <h1>Exercise</h1>
         <form action="" onSubmit={handlSubmt}>
-            <input type="text" placeholder="input your text" onChange={handlChang}/>
+            <input type="text" placeholder="input your text" onChange={handlChang} value={item}/>
             <button type="Submit">Add</button>
         </form>
     </div>

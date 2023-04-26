@@ -365,7 +365,6 @@ function Manager(props) {
 }
 
 ro("r13").render(<Manager data={l}/>)
-
 //=======================
 // Exercise:
 //=======================
@@ -376,7 +375,8 @@ function List2(props) {
             <h1>Test</h1>
             <ul>
             {
-            () => { d.map((val,idx)=>{
+            () => { 
+            d.map((val,idx)=>{
                 <li key={idx}>{val}</li>
             })
             }

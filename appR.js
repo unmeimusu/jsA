@@ -324,7 +324,7 @@ const l = ["X","Y"]
 
 function List(props) {
     const a = props.data
-    const lm = l.map((itms,idx)=>
+    const lm = a.map((itms,idx)=>
         <li key={idx}>{itms} : on index {idx}</li>
     )
     return (

@@ -390,9 +390,6 @@ const lv = [2,5]
 
 function Manager2(props) {
     const [lv, setLv] = useState(props.data)
-    function Add(newdata) {
-        setLv([...lv, newdata])
-    }
     return (
         <div>
             <List2 data={lv}/>
@@ -401,5 +398,3 @@ function Manager2(props) {
 }
 
 ro("r14").render(<Manager2 data={lv}/>)
-
-// nb: 𝐮𝐬𝐞𝐑𝐞𝐝𝐮𝐜𝐞𝐫 𝐢𝐬 𝐜𝐨𝐧𝐬𝐢𝐝𝐞𝐫𝐞𝐝 𝐛𝐞𝐭𝐭𝐞𝐫 𝐟𝐨𝐫 𝐡𝐚𝐧𝐝𝐥𝐢𝐧𝐠 𝐦𝐨𝐫𝐞 𝐜𝐨𝐦𝐩𝐥𝐞𝐱 𝐬𝐭𝐚𝐭𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬

@@ -374,13 +374,11 @@ function List2(props) {
         <div>
             <h1>Test</h1>
             <ul>
-            {
-            () => { 
-            d.map((val,idx)=>{
-                <li key={idx}>{val}</li>
-            })
-            }
-            }
+                {
+                    d.map((val,idx) =>{
+                        <li key={idx}>{val}</li>
+                    })
+                }
             </ul>
         </div>
     )

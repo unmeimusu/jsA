@@ -297,7 +297,7 @@ function ItemManager(props) {
 ro("r12").render(<ItemManager data={items}/>)
 
 // Exercise : repeat
-function Form() {
+function Form(props) {
     const [item, setItem] = useState("")
 
     function handlChang(e) {

@@ -359,10 +359,10 @@ const els = (
 // ro("r13").render(els)
 
 function Manager(props) {
-    const [items, setItems] = useState(props.data)
+    const [l, setItems] = useState(props.data)
     // link
     function Add(name) {
-        setItems([...items, name])
+        setItems([...l, name])
     }
     return (
         <div>

@@ -388,7 +388,7 @@ function List2(props) {
 
 const lv = [2,5]
 
-function Manager2() {
+function Manager2(props) {
     const [lv, setLv] = useState(props.data)
     function Add(newdata) {
         setLv([...lv, newdata])

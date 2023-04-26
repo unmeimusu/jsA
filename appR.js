@@ -324,8 +324,8 @@ function Form(props) {
 
 function Lists(props) {
     const a = props.data
-    const lm = a.map((itms,idx) =>
-        <li key={idx}>{itms} : on index {idx}</li>
+    const lm = a.map((val,idx) =>
+        <li key={idx}>{val} : on index {idx}</li>
     )
     return (
     <div>

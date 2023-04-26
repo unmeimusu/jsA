@@ -298,7 +298,7 @@ ro("r12").render(<ItemManager data={items}/>)
 // ==================
 // Exercise : repeat
 // ==================
-// Form, handlChang
+// Form, handlChang, handlSubmt
 function Form(props) {
     const [item, setItem] = useState("")
 
@@ -321,7 +321,8 @@ function Form(props) {
     </div>
     )
 }
-
+// Form, handlChang, handlSubmt
+// Lists, a, lm
 function Lists(props) {
     const a = props.data
     const lm = a.map((val,idx) =>
@@ -333,13 +334,18 @@ function Lists(props) {
     </div>
     )
 }
-
+// Form, handlChang, handlSubmt
+// Lists, a, lm
+// l
 const l = ["X","Y"]
-
+// Form, handlChang, handlSubmt
+// Lists, a, lm
+// l
+// els < Form, Lists(l)
 const els = (
     <div>
         <Form/>
-        <Lists data={items}/>
+        <Lists data={l}/>
     </div>
 )
 /* ReactDOM.render(
@@ -347,7 +353,11 @@ const els = (
     document.getElementById("r13")
 ) */
 // ro("r13").render(els)
-
+// Form, handlChang, handlSubmt
+// Lists, a, lm
+// l
+// els < Form, Lists(l)
+// Manager, Add < l, Form(handlSubmt<Add),Lists(data<l)
 function Manager(props) {
     const [l, setItems] = useState(props.data)
     // link

@@ -303,7 +303,11 @@ function Form() {
     const handlChang = (e) => setItem(e.target.value)
 
     const handlSubmt = (e) => {
-        e.preventDefault()
+    if (item !== "") {
+        props.handlSubmt(item)
+        setItem("")
+    }
+    e.preventDefault()
     }
 
     return ( 

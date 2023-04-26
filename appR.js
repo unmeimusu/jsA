@@ -321,7 +321,6 @@ function Form(props) {
     </div>
     )
 }
-// Form, handlChang, handlSubmt
 // Lists, a, lm
 function Lists(props) {
     const a = props.data
@@ -334,13 +333,8 @@ function Lists(props) {
     </div>
     )
 }
-// Form, handlChang, handlSubmt
-// Lists, a, lm
 // l
 const l = ["X","Y"]
-// Form, handlChang, handlSubmt
-// Lists, a, lm
-// l
 // els < Form, Lists(l)
 const els = (
     <div>

@@ -349,7 +349,7 @@ function Manager(props) {
     }
     return (
         <div>
-            <Addform handleSubmit={addItem}/>
+            <Addform handlSubmt={addItem}/>
             <Itemlist data={items}/>
         </div>
     )

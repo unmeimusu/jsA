@@ -353,8 +353,8 @@ function Manager(props) {
     }
     return (
         <div>
-            <Addform handlSubmt={addItem}/>
-            <Itemlist data={items}/>
+            <Form handlSubmt={addItem}/>
+            <List data={items}/>
         </div>
     )
 }

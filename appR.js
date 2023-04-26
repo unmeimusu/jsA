@@ -332,8 +332,6 @@ function Form(props) {
     )
 }
 
-const l = ["X","Y"]
-
 function Lists(props) {
     const a = props.data
     const lm = a.map((itms,idx) =>
@@ -345,6 +343,9 @@ function Lists(props) {
     </div>
     )
 }
+
+const l = ["X","Y"]
+
 const els = (
     <div>
         <Form/>

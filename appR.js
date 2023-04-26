@@ -313,6 +313,7 @@ function Form() {
         }
         e.preventDefault()
     } */
+    
     // unfix alternative
     function handlSubmt(e) {
         if (item !== "") {

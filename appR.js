@@ -230,6 +230,7 @@ function Myl(props) {
     document.getElementById("r11")
 ) */
 ro("r11").render(<Myl data={al}/>)
+
 // Event Methods and Properties
 // Component 1
 function Addform(props) {

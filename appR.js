@@ -300,6 +300,9 @@ ro("r12").render(<ItemManager data={items}/>)
 function Form() {
     const [item, setItem] = useState("")
 
+    function handlChang(e) {
+        setItem(e.target.value)
+    }
     const handlChang = (e) => setItem(e.target.value)
 
     const handlSubmt = (e) => {

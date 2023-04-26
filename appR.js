@@ -295,11 +295,13 @@ function ItemManager(props) {
     document.getElementById("r12")
 ) */
 ro("r12").render(<ItemManager data={items}/>)
-
+// ==================
 // Exercise : repeat
+// ==================
+// Form, handlChang
 function Form(props) {
     const [item, setItem] = useState("")
-    
+
     const handlChang = (e) => setItem(e.target.value)
 
     const handlSubmt = (e) => {

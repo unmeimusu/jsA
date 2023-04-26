@@ -355,7 +355,7 @@ const els = (
     els,
     document.getElementById("r13")
 ) */
-ro("r13").render(els)
+// ro("r13").render(els)
 
 function Manager(props) {
     const [items,setItems] = useState(props.data)

@@ -353,11 +353,12 @@ const els = (
     document.getElementById("r13")
 ) */
 // ro("r13").render(els)
+
 // Form, handlChang, handlSubmt
 // Lists, a, lm
 // l
 // els < Form, Lists(l)
-// Manager, Add < l, Form(handlSubmt<Add),Lists(data<l)
+// Manager,Add < l,Form(handlSubmt<Add),Lists(data<l)
 function Manager(props) {
     const [l, setItems] = useState(props.data)
     // link

@@ -304,7 +304,7 @@ function Form() {
 
     const handlSubmt = (e) => {
         if (item !== "") {
-            props.handlSubmt(item)
+            props.handlSubmt(item) 
             setItem("")
         }
         e.preventDefault()

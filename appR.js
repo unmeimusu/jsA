@@ -369,11 +369,18 @@ ro("r13").render(<Manager data={l}/>)
 //=======================
 // Exercise:
 //=======================
-function List2() {
+function List2(props) {
+    const d = props.data
     return (
         <div>
+            <h1>Test</h1>
             <ul>
-                <li></li>
+            {
+            () => { d.map((val,idx)=>{
+                <li key={idx}>{val}</li>
+            })
+            }
+            }
             </ul>
         </div>
     )
@@ -381,17 +388,16 @@ function List2() {
 
 const lv = [2,5]
 
-function Manager() {
+function Manager2() {
     const [lv, setLv] = useState(props.data)
-    function Add(newdata) {
+/*     function Add(newdata) {
         setLv([...lv, newdata])
-    }
+    } */
     return (
         <div>
-            <Form2 handlSubmt={Add}/>
             <List2 data={lv}/>
         </div>
     )
 }
 
-ro("r14").render(<Manager data={lv}/>)
+ro("r14").render(<Manager2/>)

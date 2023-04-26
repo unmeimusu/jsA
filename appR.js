@@ -347,4 +347,10 @@ function Manager(props) {
     function addItem(name) {
         setItems([...items, name])
     }
+    return (
+        <div>
+            <Addform handleSubmit={addItem}/>
+            <Itemlist data={items}/>
+        </div>
+    )
 }

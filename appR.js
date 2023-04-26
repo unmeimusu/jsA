@@ -336,7 +336,7 @@ const l = ["X","Y"]
 
 function List(props) {
     const a = props.data
-    const lm = a.map((itms,idx)=>
+    const lm = a.map((itms,idx) =>
         <li key={idx}>{itms} : on index {idx}</li>
     )
     return (
@@ -348,7 +348,7 @@ function List(props) {
 const els = (
     <div>
         <Form/>
-        <List/>
+        <List data={items}/>
     </div>
 )
 /* ReactDOM.render(

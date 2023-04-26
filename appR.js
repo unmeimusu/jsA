@@ -366,3 +366,11 @@ function Manager(props) {
 
 ro("r13").render(<Manager data={l}/>)
 
+//=======================
+// Exercise:
+//=======================
+function Manager() {
+    return (
+        
+    )
+}

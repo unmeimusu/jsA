@@ -299,28 +299,16 @@ ro("r12").render(<ItemManager data={items}/>)
 // Exercise : repeat
 function Form(props) {
     const [item, setItem] = useState("")
+    
+    const handlChang = (e) => setItem(e.target.value)
 
-    function handlChang(e) {
-        setItem(e.target.value)
-    }
-
-    function handlSubmt(e) {
-        if (item !== "") {
-            props.handlSubmt(item)
-            setItem("")
-        }
-        e.preventDefault()
-    }
-    // unfix alternative
-    // const handlChang = (e) => setItem(e.target.value)
-
-/*     const handlSubmt = (e) => {
+    const handlSubmt = (e) => {
         if (item !== "") {
             props.handlSubmt(item) 
             setItem("")
         }
         e.preventDefault()
-    } */
+    }
     return ( 
     <div>
         <h1>Exercise</h1>

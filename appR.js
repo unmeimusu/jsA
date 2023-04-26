@@ -334,7 +334,7 @@ function Form() {
 
 const l = ["X","Y"]
 
-function List(props) {
+function Lists(props) {
     const a = props.data
     const lm = a.map((itms,idx) =>
         <li key={idx}>{itms} : on index {idx}</li>
@@ -348,7 +348,7 @@ function List(props) {
 const els = (
     <div>
         <Form/>
-        <List data={items}/>
+        <Lists data={items}/>
     </div>
 )
 /* ReactDOM.render(
@@ -366,7 +366,7 @@ function Manager(props) {
     return (
         <div>
             <Form handlSubmt={Add}/>
-            <List data={l}/>
+            <Lists data={l}/>
         </div>
     )
 }

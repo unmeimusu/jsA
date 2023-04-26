@@ -295,6 +295,7 @@ function ItemManager(props) {
     document.getElementById("r12")
 ) */
 ro("r12").render(<ItemManager data={items}/>)
+
 // ==================
 // Exercise : repeat
 // ==================
@@ -364,3 +365,4 @@ function Manager(props) {
 }
 
 ro("r13").render(<Manager data={l}/>)
+

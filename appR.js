@@ -369,8 +369,22 @@ ro("r13").render(<Manager data={l}/>)
 //=======================
 // Exercise:
 //=======================
+
+
+
+const lv = [2,5]
+
 function Manager() {
+    const [lv, setLv] = useState(props.data)
+    function Add(newdata) {
+        setL([...lv, newdata])
+    }
     return (
-        div
+        <div>
+            <Form handlSubmt={Add}/>
+            <Lists data={lv}/>
+        </div>
     )
 }
+
+ro("r14").render(<Manager data={lv}/>)

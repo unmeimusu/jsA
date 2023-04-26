@@ -348,13 +348,15 @@ ro("r13").render(els)
 function Manager(props) {
     const [items,setItems] = useState(props.data)
     // link
-    function addItem(name) {
+    function Add(name) {
         setItems([...items, name])
     }
     return (
         <div>
-            <Form handlSubmt={addItem}/>
+            <Form handlSubmt={Add}/>
             <List data={l}/>
         </div>
     )
 }
+
+ro("r13").render(<Manager data={l}/>)

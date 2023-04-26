@@ -369,20 +369,27 @@ ro("r13").render(<Manager data={l}/>)
 //=======================
 // Exercise:
 //=======================
-
-
+function List2() {
+    return (
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    )
+}
 
 const lv = [2,5]
 
 function Manager() {
     const [lv, setLv] = useState(props.data)
     function Add(newdata) {
-        setL([...lv, newdata])
+        setLv([...lv, newdata])
     }
     return (
         <div>
-            <Form handlSubmt={Add}/>
-            <Lists data={lv}/>
+            <Form2 handlSubmt={Add}/>
+            <List2 data={lv}/>
         </div>
     )
 }

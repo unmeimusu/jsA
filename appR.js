@@ -303,15 +303,25 @@ function Form() {
     function handlChang(e) {
         setItem(e.target.value)
     }
-    const handlChang = (e) => setItem(e.target.value)
+    // unfix alternative
+    // const handlChang = (e) => setItem(e.target.value)
 
-    const handlSubmt = (e) => {
+/*     const handlSubmt = (e) => {
         if (item !== "") {
             props.handlSubmt(item) 
             setItem("")
         }
         e.preventDefault()
+    } */
+    // unfix alternative
+    function handlSubmt(e) {
+        if (item !== "") {
+            props.handleSubmt(item)
+            setItem("")
+        }
+        e.preventDefault()
     }
+
     return ( 
     <div>
         <h1>Exercise</h1>

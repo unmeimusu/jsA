@@ -10,7 +10,7 @@ root.render(<h1>Hello, React!</h1>)
 function ro(id) {
     return ReactDOM.createRoot(document.getElementById(id))
 }
-ro("r").render(<h1>Hello, React!</h1>)
+root.render(<h1>Hello, React!</h1>)
 
 let counter = 0
 

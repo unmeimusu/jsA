@@ -303,6 +303,14 @@ function Form() {
     function handlChang(e) {
         setItem(e.target.value)
     }
+
+    function handlSubmt(e) {
+        if (item !== "") {
+            props.handleSubmt(item)
+            setItem("")
+        }
+        e.preventDefault()
+    }
     // unfix alternative
     // const handlChang = (e) => setItem(e.target.value)
 
@@ -313,16 +321,6 @@ function Form() {
         }
         e.preventDefault()
     } */
-
-    // unfix alternative
-    function handlSubmt(e) {
-        if (item !== "") {
-            props.handleSubmt(item)
-            setItem("")
-        }
-        e.preventDefault()
-    }
-
     return ( 
     <div>
         <h1>Exercise</h1>

@@ -6,7 +6,6 @@
 
 const root = ReactDOM.createRoot(document.querySelector('#r'))
 root.render(<h1>Hello, React!</h1>)
-root.render(<h1>Hello, React!</h1>)
 
 function ro(id) {
     return ReactDOM.createRoot(document.getElementById(id))

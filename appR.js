@@ -250,7 +250,7 @@ function Addform(props) {
     return (
     <div>
         <h1>Add Item</h1>
-        <form onSubmit={handleSubmit} action="">
+        <form action="" onSubmit={handleSubmit}>
             <input type="text" placeholder="Input new item" onChange={handleChange} value={item}/>
             <button type="Submit">Add</button>
         </form>
@@ -313,7 +313,7 @@ function Form() {
         }
         e.preventDefault()
     } */
-    
+
     // unfix alternative
     function handlSubmt(e) {
         if (item !== "") {

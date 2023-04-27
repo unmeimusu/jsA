@@ -395,4 +395,4 @@ function Manager2(props) {
     )
 }
 
-ro("r14").render(<Manager2 data={lv}/>)
+ro("r14").render(<List2 data={lv}/>)

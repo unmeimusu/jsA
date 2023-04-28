@@ -365,34 +365,3 @@ function Manager(props) {
 }
 
 ro("r13").render(<Manager data={l}/>)
-//=======================
-// Exercise:
-//=======================
-function List2(props) {
-    const d = props.data
-    return (
-        <div>
-            <h1>Test</h1>
-            <ul>
-                {
-                    d.map((val,idx) =>{
-                        <li key={idx}>{val}</li>
-                    })
-                }
-            </ul>
-        </div>
-    )
-}
-
-const lv = [2,5]
-
-function Manager2(props) {
-    const [lv, setLv] = useState(props.data)
-    return (
-        <div>
-            <List2 data={lv}/>
-        </div>
-    )
-}
-
-ro("r14").render(<List2 data={lv}/>)

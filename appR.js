@@ -4,6 +4,8 @@
     document.getElementById("r")
 ) */
 
+// returning HTML with <></> or React.Fragment shorthand
+
 const root = ReactDOM.createRoot(document.querySelector('#r'))
 root.render(<h1>Hello, React!</h1>)
 
@@ -27,7 +29,7 @@ setInterval(show,1000)
 // Components
 // Functional Component - It's return DOM
 function Hello() {
-    return <div>Hello World.</div>
+    return <>Hello World.</>
 }
 function Section() {
     return <section>A section.</section>
@@ -59,11 +61,11 @@ function Header(props) {
 }
 
 function Multi() {
-    return <div>
+    return <>
         <Header name="D"/>
         <Header name="X"/>
         <Header name="T"/>
-    </div>
+    </>
 }
 
 const hl = <Header name="Header"/>
@@ -72,7 +74,7 @@ const mhl = <Multi/>
     <div>{hl}{mhl}</div>,
     document.getElementById("r3")
 ) */
-ro("r3").render(<div>{hl}{mhl}</div>)
+ro("r3").render(<>{hl}{mhl}</>)
 // Class Component with props
 class Button extends React.Component {
     render() {
@@ -85,13 +87,13 @@ const bl = <Button name="Maria"/>
     <div>{bl}</div>,
     document.getElementById("r4")
 ) */
-ro("r4").render(<div>{bl}</div>)
+ro("r4").render(<>{bl}</>)
 // Multiple props for multiple arguments on a component
 function Item(props) {
-    return <div className="item">
+    return <React.Fragment className="item">
         <b>Name: </b><span>{props.name}</span><br />
         <b>Price: </b><span>{props.price}</span>
-    </div>
+    </React.Fragment>
 }
 
 const il = <Item name="Mask" price="$5.99"></Item>
@@ -108,9 +110,9 @@ class Reactit extends React.Component {
     }
 
     render() {
-        return <div>
+        return <>
         <h1>Hello, {this.state.message}</h1>
-        </div>
+        </>
     }
 }
 
@@ -131,10 +133,10 @@ class Counter extends React.Component {
         })
     }
     render() {
-        return <div>
+        return <>
             <p>{this.state.counter}</p>
             <button onClick={this.increment}>Increase</button>
-        </div>
+        </>
     }
 }
 /* ReactDOM.render(
@@ -153,10 +155,10 @@ function Reactf() {
         setCounter(counter+1);
     }
 
-    return <div>
+    return <>
         <h1>Hello, {counter}.</h1>
         <button onClick={increment}>++</button>
-        </div>
+        </>
 }
 
 /* ReactDOM.render(
@@ -183,10 +185,10 @@ class Countlc extends React.Component {
         console.log("componentWillUnmount() lifecycle")
     }
     render() {
-        return <div>
+        return <>
             <p>{this.state.counter}</p>
             <button onClick={this.increment}>Increment</button>
-        </div>
+        </>
     }
 }
 /* ReactDOM.render(
@@ -204,10 +206,10 @@ function Converter() {
     function convert(Km) {
         return (Km/1.609).toFixed(2)
     }
-    return <div>
+    return <>
         <input type="text" value={km} onChange={handleChange}/>
         <p>{km} km is {convert(km)} miles</p>
-    </div>
+    </>
 }
 /* ReactDOM.render(
     <Converter/>,
@@ -248,13 +250,13 @@ function Addform(props) {
         e.preventDefault()
     }
     return (
-    <div>
+    <>
         <h1>Add Item</h1>
         <form action="" onSubmit={handleSubmit}>
             <input type="text" placeholder="Input new item" onChange={handleChange} value={item}/>
             <button type="Submit">Add</button>
         </form>
-    </div>
+    </>
     )
 }
 // Component 2
@@ -269,10 +271,10 @@ function Itemlist(props) {
 const items = ["J","T","A","B"]
 
 const eStatic = (
-    <div>
+    <>
         <Addform/>
         <Itemlist data={items}/>
-    </div>
+    </>
 )
 
 // Parent Component : data flow from parent to child components ( unidirectional data )
@@ -283,10 +285,10 @@ function ItemManager(props) {
         setItems([...items, name])
     }
     return (
-        <div>
+        <>
             <Addform handleSubmit={addItem}/>
             <Itemlist data={items}/>
-        </div>
+        </>
     )
 }
 /* ReactDOM.createRoot(
@@ -313,13 +315,13 @@ function Form(props) {
         e.preventDefault()
     }
     return ( 
-    <div>
+    <>
         <h1>Exercise</h1>
         <form action="" onSubmit={handlSubmt}>
             <input type="text" placeholder="input your text" onChange={handlChang} value={item}/>
             <button type="Submit">Add</button>
         </form>
-    </div>
+    </>
     )
 }
 // Lists, a, lm
@@ -329,19 +331,19 @@ function Lists(props) {
         <li key={idx}>{val} : on index {idx}</li>
     )
     return (
-    <div>
+    <>
         <ul>{lm}</ul>
-    </div>
+    </>
     )
 }
 // l
 const l = ["X","Y"]
 // els < Form, Lists(l)
 const els = (
-    <div>
+    <>
         <Form/>
         <Lists data={l}/>
-    </div>
+    </>
 )
 /* ReactDOM.render(
     els,
@@ -357,10 +359,10 @@ function Manager(props) {
         setItems([...l, name])
     }
     return (
-        <div>
+        <>
             <Form handlSubmt={Add}/>
             <Lists data={l}/>
-        </div>
+        </>
     )
 }
 
